@@ -77,7 +77,7 @@ const AuthProvider = ({ children }) => {
         navigate("/");
         Swal.fire({
           title: "Sesión Cerrada",
-          text: "La sesión se cerro exitoxamente, vuelva pronto.",
+          text: "La sesión se cerro correctamente, vuelva pronto.",
           icon: "success",
           confirmButtonText: "Entendido",
         });
