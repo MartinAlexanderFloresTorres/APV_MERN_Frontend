@@ -87,13 +87,19 @@ const Login = () => {
   };
   return (
     <div>
+      <div className="bg-white sm:p-10 p-6 rounded shadow-sm border mb-5">
+        <h1 className="text-indigo-600 font-bold sm:text-5xl text-4xl text-center">
+          Bienvenido 😀 Inicia Sesión y Administra tus{" "}
+          <span className="text-gray-700">Pacientes</span>
+        </h1>
+      </div>
+
       <form
         onSubmit={handleSubmit}
         className="bg-white sm:p-10 p-6 rounded shadow-sm border mb-5"
       >
         <legend className="text-indigo-600 font-bold sm:text-5xl text-4xl text-center mb-10">
-          Inicia Sesión y Administra tus{" "}
-          <span className="text-gray-700">Pacientes</span>
+          <span className="text-gray-700">Iniciar Sesión</span>
         </legend>
 
         <div className="mb-5">

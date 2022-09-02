@@ -26,7 +26,7 @@ const DashboardLayout = () => {
     <PacientesProvider>
       <div className="flex flex-col items-center justify-between min-h-screen w-full">
         <Header />
-        {Object.keys(auth).length > 0 ? (
+        {auth?._id ? (
           <main className="max-w-7xl mx-auto w-full">
             <Outlet />
           </main>

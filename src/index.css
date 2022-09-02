@@ -2,16 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 13px;
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  transition: 0.3s ease all;
+  border-radius: 13px;
+  border: 1px solid rgb(248 250 252);
+}
+::-webkit-scrollbar-thumb:active {
+  background: #dddddd;
+}
 body {
   font-family: "Roboto Condensed", sans-serif;
 }
-.grid-navegacion{
+.grid-navegacion {
   grid-template-columns: 1fr 50px;
 }
-.grid-navegacion-perfil{
+.grid-navegacion-perfil {
   grid-column: 2 / -1;
 }
-.grid-navegacion-form{
+.grid-navegacion-form {
   grid-column: 1 / 2;
 }
 .loading {

@@ -27,7 +27,7 @@ const Header = () => {
     <header
       className={`${
         pathname === "/dashboard" ? "md:sticky md:top-0" : "static"
-      } py-4 md:px-10 px-5 bg-indigo-600 w-full z-10`}
+      } py-4 md:px-10 px-5 bg-white border-b border-gray-100 w-full z-10`}
     >
       {menu && (
         <div
@@ -38,10 +38,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto md:flex-row flex-col flex text-center items-center justify-between gap-5 mb-3 w-full">
         <Link
           to={"/dashboard"}
-          className="font-bold text-2xl text-indigo-200 md:mb-0 mb-2"
+          className="font-bold text-2xl text-indigo-600 md:mb-0 mb-2"
         >
           Administrador de Pacientes de{" "}
-          <span className="text-white">Veterinaria</span>
+          <span className="text-gray-700">Veterinaria</span>
         </Link>
         <div
           className={`${
@@ -68,7 +68,7 @@ const Header = () => {
             } ml-auto w-full  relative`}
           >
             <input
-              className={`md:w-[300px] w-full ml-auto outline-indigo-100 md:focus-visible:w-[70%] transition-all outline-offset-0 p-2 rounded block text-gray-700 placeholder:text-gray-500 pr-10`}
+              className={`md:w-[300px] w-full ml-auto border border-gray-100 outline-indigo-100 md:focus-visible:w-[70%] transition-all outline-offset-0 p-2 rounded block text-gray-700 placeholder:text-gray-500 pr-10`}
               type="text"
               name="search"
               value={search}
@@ -107,7 +107,7 @@ const Header = () => {
             <button
               title={`${auth?.nombre}`}
               className={`${
-                menu ? "bg-white text-gray-700" : "bg-transparent text-white"
+                menu ? "bg-slate-50 text-gray-800" : "bg-white text-gray-600"
               } hover:bg-white hover:text-gray-700 w-[40px] h-[40px] flex items-center font-bold justify-center gap-2 border rounded-full transition-colors`}
               onClick={() => setMenu(!menu)}
             >
@@ -119,7 +119,7 @@ const Header = () => {
                 menu ? "scale-100" : "scale-0"
               } absolute border shadow rounded-md overflow-hidden bg-white w-[236px] transition-all top-[50px] right-0 origin-top-right`}
             >
-              <div className="text-gray-600 text-xl  py-2 block w-full hover:bg-indigo-50 transition-colors">
+              <div className="text-gray-600 text-xl  py-2 block w-full hover:bg-slate-50 transition-colors">
                 <div className="flex items-center justify-center text-center gap-2 mb-1">
                   <div className="w-[30px] h-[30px] p-1 text-sm font-bold flex items-center justify-center gap-2 border rounded-full uppercase bg-white">
                     <img src="/react.svg" alt="react" />
@@ -139,14 +139,14 @@ const Header = () => {
               <Link
                 to={"/dashboard/perfil"}
                 onClick={() => setMenu(!menu)}
-                className="text-gray-600 text-[16px] font-bold py-3 block w-full hover:bg-indigo-50 transition-colors"
+                className="text-gray-600 text-base font-bold py-3 block w-full hover:bg-slate-50 transition-colors"
               >
                 Actualizar Perfil
               </Link>
               <Link
                 onClick={() => setMenu(!menu)}
                 to={"/dashboard/cambiar-password"}
-                className="text-gray-600 text-[16px] font-bold py-3 block w-full hover:bg-indigo-50 transition-colors"
+                className="text-gray-600 text-base font-bold py-3 block w-full hover:bg-slate-50 transition-colors"
               >
                 Cambiar Password
               </Link>
@@ -155,7 +155,7 @@ const Header = () => {
                   cerrarSesion();
                   setMenu(!menu);
                 }}
-                className="flex items-center justify-center gap-2 text-white text-[16px] font-bold bg-indigo-600 hover:bg-indigo-700 transition-colors py-2 w-full rounded-md"
+                className="flex items-center justify-center gap-2 text-white text-base font-bold bg-indigo-600 hover:bg-indigo-700 transition-colors py-2 w-full rounded-md"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -95,7 +95,7 @@ const Search = () => {
             : "hidden"
         } w-full`}
       >
-        <div className=" lg:w-3/4 2xl:w-2/5  max-w-4xl mx-auto ">
+        <div className="w-full max-w-4xl lg:w-3/4  mx-auto">
           <button
             onClick={() => {
               setPaciente({});

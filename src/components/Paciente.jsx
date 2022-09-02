@@ -1,3 +1,4 @@
+import { formatearFecha } from "../helpers";
 import usePacientes from "../hooks/usePacientes";
 
 const Paciente = ({ paciente }) => {
@@ -6,15 +7,6 @@ const Paciente = ({ paciente }) => {
   // usePacientes
   const { clickEditar, clickEliminar } = usePacientes();
 
-  const formatearFecha = (fecha) => {
-    const fechaNueva = new Date(fecha);
-    const opciones = {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    };
-    return fechaNueva.toLocaleString("es-ES", opciones);
-  };
   return (
     <div className="my-2 bg-white p-5 shadow rounded-xl">
       <p className="font-bold uppercase text-gray-700 mb-2">
@@ -37,9 +29,12 @@ const Paciente = ({ paciente }) => {
         <span className="border px-2 py-1 rounded-md inline-block text-[14px]">
           Email de Contacto:
         </span>{" "}
-        <span className="font-normal normal-case break-all text-gray-800 text-sm">
+        <a
+          href={`mailto:${email}`}
+          className="font-normal normal-case break-all text-sky-600 hover:text-sky-700 transition-colors hover:underline text-sm"
+        >
           {email}
-        </span>
+        </a>
       </p>
       <p className="font-bold uppercase text-gray-700 mb-2">
         <span className="border px-2 py-1 rounded-md inline-block text-[14px]">

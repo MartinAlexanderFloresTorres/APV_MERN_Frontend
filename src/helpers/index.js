@@ -1,3 +1,4 @@
+// traer la configuración de la peticiones httpp
 const getConfig = () => {
   // token
   const getToken = localStorage.getItem("token-APV");
@@ -11,4 +12,14 @@ const getConfig = () => {
   return config;
 };
 
-export { getConfig };
+// formatear fecha
+const formatearFecha = (fecha) => {
+  const fechaNueva = new Date(fecha);
+  const opciones = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
+  return fechaNueva.toLocaleString("es-ES", opciones);
+};
+export { getConfig, formatearFecha };
