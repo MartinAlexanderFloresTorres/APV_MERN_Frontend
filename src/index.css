@@ -19,6 +19,7 @@
 }
 body {
   font-family: 'Roboto Condensed', sans-serif;
+  min-width: 320px;
 }
 svg {
   max-width: 100%;

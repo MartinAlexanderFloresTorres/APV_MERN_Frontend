@@ -27,7 +27,7 @@ const ListadoPacientes = () => {
         </div>
       )}
 
-      <div>
+      <div className='overflow-auto pr-1' style={{ maxHeight: 650 }}>
         {pacientes.length > 0 &&
           pacientes.map((paciente) => <Paciente key={paciente._id} paciente={paciente} />)}
       </div>
