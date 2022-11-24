@@ -18,7 +18,11 @@
   background: #dddddd;
 }
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+svg {
+  max-width: 100%;
+  display: block;
 }
 .grid-navegacion {
   grid-template-columns: 1fr 50px;
@@ -45,7 +49,7 @@ body {
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: rgb(79 70 229);
+  background-color: rgb(255, 66, 75);
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
